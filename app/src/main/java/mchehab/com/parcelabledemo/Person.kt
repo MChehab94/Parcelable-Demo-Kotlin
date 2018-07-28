@@ -43,7 +43,7 @@ class Person : Parcelable {
 
     companion object {
 
-        val CREATOR: Parcelable.Creator<Person> = object : Parcelable.Creator<Person> {
+        @JvmField val CREATOR: Parcelable.Creator<Person> = object : Parcelable.Creator<Person> {
             override fun createFromParcel(`in`: Parcel): Person {
                 return Person(`in`)
             }
